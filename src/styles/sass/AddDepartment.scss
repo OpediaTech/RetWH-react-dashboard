@@ -1,0 +1,49 @@
+.addDepartment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $x-0-5;
+  .addDepartment__form {
+    max-width: 620px;
+    width: 100%;
+    background-color: $white-alt;
+
+    padding: $x-1-5;
+    position: relative;
+    border-radius: 15px;
+    // height: 90vh;
+    // overflow-y: auto;
+    @include breakpoint(md) {
+      padding: $x-2;
+    }
+
+    .form__title {
+      font-weight: $semi-bold;
+      @include h2-font;
+      margin-bottom: $x-0-75;
+      color: $dark-alt;
+    }
+    .form__group {
+      .form__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
+        .checkbox__text {
+          color: $dark-alt;
+          color: $dark-alt;
+          font-weight: $semi-bold;
+          @include normal-font;
+        }
+      }
+    }
+    .addDepartment__btn {
+      margin-top: $x-1;
+    }
+    .addDepartment__close {
+      position: absolute;
+      top: 0.8rem;
+      right: 0.8rem;
+    }
+  }
+}

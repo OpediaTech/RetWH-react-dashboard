@@ -1,0 +1,92 @@
+// Top products skeleton
+.topProductSkeleton {
+  display: flex;
+  gap: 0.8rem;
+  padding: $x-0-75 $x-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $white;
+    z-index: -1;
+    border-radius: 8px;
+    opacity: 0.4;
+    @include shadow-btn;
+  }
+
+  @include breakpoint(sm) {
+    gap: 1rem;
+  }
+
+  .skeleton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+// Wholesaler card skeleton
+.wholeSalerCardSkeleton {
+  background-color: $white-alt;
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: $x-0-75;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  @include breakpoint(md) {
+    margin: initial;
+  }
+}
+
+// Product Card skeleton
+.productCardSkeleton {
+  background-color: $primary-25;
+  max-width: 250px;
+  .skeleton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: $x-0-75;
+  }
+}
+
+// Profile Skeleton
+.profileSkeleton {
+  max-width: 330px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $gray;
+  height: max-content;
+
+  .profileSkeleton__profile {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: $x-1-25;
+
+    .profileSkeleton__details {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  .skeleton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: $x-0-75;
+  }
+}

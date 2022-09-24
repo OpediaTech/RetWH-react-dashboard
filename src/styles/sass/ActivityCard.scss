@@ -1,0 +1,50 @@
+.activity__card {
+  border-radius: 8px;
+  padding: $x-0-75;
+
+  @include breakpoint(md) {
+    padding: $x-1;
+  }
+  @include breakpoint(lg) {
+    padding: $x-1-25;
+  }
+
+  .card__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card__details {
+      .card__title {
+        font-weight: $semi-bold;
+        color: $white-alt;
+        @include h4-font;
+      }
+      .card__time {
+        @include smallest-font;
+        color: $white-alt;
+        display: block;
+        margin-top: -0.2rem;
+      }
+      .card__total {
+        @include h2-font;
+        color: $white-alt;
+        font-weight: $bold;
+      }
+    }
+
+    .card__icon {
+      // background-color: $white-alt;
+      // width: 80px;
+      // height: 80px;
+      // border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .MuiSvgIcon-root {
+        font-size: 4.5rem;
+        color: $white-alt;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// Import of partial files
+@import "config/breakpoints";
+@import "config/mixins";
+@import "config/variables";
+@import "config/base";
+@import "config/layout";
+@import "config/controls";
+
+// Import sass files
+@import "sass/AdminLogin.scss";
+@import "sass/Header.scss";
+@import "sass/Menu.scss";
+@import "sass/DashboardLayout.scss";
+@import "sass/DashboardPageLayout.scss";
+@import "sass/Dashboard.scss";
+@import "sass/Products.scss";
+@import "sass/AddProduct.scss";
+@import "sass/AddBulkProduct.scss";
+@import "sass/Departments.scss";
+@import "sass/AddDepartment.scss";
+@import "sass/Shop.scss";
+@import "sass/Profile.scss";
+@import "sass/AddShop.scss";
+@import "sass/Users.scss";
+@import "sass/AddUser.scss";
+@import "sass/ActivityCard.scss";
+@import "sass/Table.scss";
+@import "sass/BuyProducts.scss";
+@import "sass/ProductCard.scss";
+@import "sass/ProductListItem.scss";
+@import "sass/Cart.scss";
+@import "sass/CartItem.scss";
+@import "sass/CartSubtotal.scss";
+@import "sass/Wholesalers.scss";
+@import "sass/WholesalerProfile.scss";
+@import "sass/PointOfSales.scss";
+@import "sass/PosTable.scss";
+@import "sass/PosBillings.scss";
+@import "sass/TopProductsList.scss";
+@import "sass/Skeletons.scss";
+@import "sass/ConnectForm.scss";
+@import "sass/ReportInvoice.scss";
+@import "sass/MakeAnOrder.scss";
+@import "sass/MakeOrderHeader.scss";
+@import "sass/ShippingForm.scss";
+@import "sass/SingleOrder.scss";
+@import "sass/CartContent.scss";

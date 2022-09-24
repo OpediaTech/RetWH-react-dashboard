@@ -1,0 +1,15 @@
+.makeAnOrder__section {
+  .retialer__info {
+    display: flex;
+    gap: 3rem;
+    margin-top: $x-1-5;
+    .info__name {
+      font-weight: $semi-bold;
+      @include normal-font;
+      display: block;
+      .info__details {
+        color: $primary;
+      }
+    }
+  }
+}

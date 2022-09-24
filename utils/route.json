@@ -1,0 +1,46 @@
+[
+    {
+      "to": "*",
+      "element": "<Sales />",
+      "access": true
+    },
+    {
+      "to": "products",
+      "element": "<Products />",
+      "access": false
+    },
+    {
+      "to": "brands",
+      "element": "<Brands />",
+      "access": true
+    },
+    {
+      "to": "category",
+      "element": "<Category />",
+      "access": true
+    },
+    {
+      "to": "orders",
+      "element": "<Orders />"
+    },
+    {
+      "to": "orderstatus",
+      "element": "<OrderStatus />"
+    },
+    {
+      "to": "users",
+      "element": "<Users />"
+    },
+    {
+      "to": "coupons",
+      "element": "<Coupons />"
+    },
+    {
+      "to": "transection",
+      "element": "<Transection />"
+    },
+    {
+      "to": "shippings",
+      "element": "<Shippings />"
+    }
+  ]

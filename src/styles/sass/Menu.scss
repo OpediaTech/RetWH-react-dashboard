@@ -1,0 +1,98 @@
+.menu {
+  position: fixed;
+  width: 14rem;
+  height: calc(100vh - 3.5rem);
+  top: 3.5rem;
+  left: -100%;
+  z-index: $z-99;
+  overflow-y: overlay;
+  background-color: $primary;
+  @include transition(200ms);
+  @include breakpoint(md) {
+    height: calc(100vh - 4rem);
+    top: 4rem;
+    left: 0;
+  }
+  @include breakpoint(lg) {
+    width: 15rem;
+  }
+  @include breakpoint(xl) {
+    width: 16rem;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    // gap: 0.5rem;
+    // height: 100%;
+    padding-bottom: 3rem;
+    // @include header-shadow(12px);
+    // @include breakpoint(md) {
+
+    // }
+    .menu__item {
+      .menu__link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $white;
+        padding: $x-0-75 0 $x-0-75 $x-1-5;
+        border-left: 2px solid transparent;
+        @include transition(200ms);
+        @include breakpoint(md) {
+          gap: 0.8rem;
+        }
+        @include breakpoint(lg) {
+          padding: $x-1 0 $x-1 $x-1-5;
+        }
+
+        .menu__text {
+          font-weight: $semi-bold;
+          @include smaller-font;
+          @include breakpoint(sm) {
+            @include small-font;
+          }
+        }
+        .MuiSvgIcon-root {
+          @include h2-font;
+          @include breakpoint(md) {
+            @include h3-font;
+          }
+        }
+        // hover link
+        &:hover {
+          background-color: rgba(24, 2, 75, 0.103);
+          border-left: 2px solid $white;
+        }
+      }
+      .active__link {
+        background-color: rgba(24, 2, 75, 0.103);
+        border-left: 2px solid $white;
+      }
+    }
+  }
+}
+
+// Menu open
+.menuOpen {
+  left: 0;
+}
+
+// Hamburger menu
+.hamburger__menu {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: $z-99;
+  @include breakpoint(md) {
+    display: none;
+  }
+
+  // .MuiIconButton-root {
+  //   background-color: $white-alt;
+  //   @include header-shadow(12px);
+  //   &:hover {
+  //     background-color: $white;
+  //   }
+  // }
+}

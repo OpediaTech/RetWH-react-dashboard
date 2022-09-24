@@ -1,0 +1,133 @@
+.sos__section {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  .sol__loading {
+    max-width: 794px;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sos__flex {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .sos__container {
+    max-width: 794px;
+    margin: auto;
+    height: 100%;
+    // margin-top: $x-1;
+    margin-bottom: $x-1;
+    padding: $x-1;
+    position: relative;
+    border: 1px solid $gray;
+    // background-color: $white-alt;
+
+    .sos__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      .order {
+        text-transform: uppercase;
+        font-weight: $semi-bold;
+      }
+
+      .grid__data {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav__logo {
+        img {
+          // width: 220px;
+        }
+      }
+    }
+
+    .sos__flex {
+      display: flex;
+      gap: 3rem;
+      margin-top: $x-1;
+
+      .invoice__order {
+        text-transform: uppercase;
+        font-weight: $semi-bold;
+        display: block;
+      }
+
+      .flex__data {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin-top: $x-1-5;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          th {
+            padding: $x-0-5 $x-1;
+            background-color: $primary-50;
+            color: $primary;
+            white-space: nowrap;
+            @include small-font;
+            text-transform: uppercase;
+
+            &:last-child {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            text-align: left;
+            padding: $x-0-5 $x-1;
+            font-weight: $semi-bold;
+            color: $dark-alt;
+            @include small-font;
+            white-space: nowrap;
+            @include transition(100ms);
+            text-align: center;
+            &:last-child {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      tfoot {
+        border-top: 1px solid $gray;
+        tr {
+          td {
+            text-align: left;
+            padding: $x-0-5 $x-1;
+            font-weight: $semi-bold;
+            color: $dark-alt;
+            @include normal-font;
+            white-space: nowrap;
+            @include transition(100ms);
+            text-align: right;
+
+            &:first-child {
+              text-align: right;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

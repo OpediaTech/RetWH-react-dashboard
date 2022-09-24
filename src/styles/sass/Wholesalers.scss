@@ -1,0 +1,54 @@
+.wholesaler__section {
+  margin-bottom: $x-2;
+  .wholesaler__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    padding-bottom: $x-0-75;
+
+    .wholesaler__title {
+      @include h2-font;
+      color: $dark-alt;
+      font-weight: $semi-bold;
+    }
+  }
+
+  .wholesaler__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 0.5rem;
+    row-gap: 1.5rem;
+    margin-top: $x-2;
+
+    .wholesaler__card {
+      background-color: $white-alt;
+      max-width: 150px;
+      width: 100%;
+      margin: 0 auto;
+      padding: $x-0-75;
+      text-align: center;
+      @include breakpoint(md) {
+        margin: initial;
+      }
+      img {
+        height: 80px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .wholesalerCard__title {
+        @include small-font;
+        color: $dark-alt;
+        font-weight: $semi-bold;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.section__page {
+  padding: $x-1 0;
+}

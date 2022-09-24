@@ -1,0 +1,107 @@
+.table__section {
+  // background: green;
+  height: calc(100vh - 4rem);
+  display: grid;
+  grid-template-rows: max-content auto 55px;
+  padding: $x-0-75;
+  padding-bottom: 0;
+
+  .table__head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: $x-0-75;
+    .table__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header__title {
+        font-weight: $semi-bold;
+        color: $dark-alt;
+        @include h3-font;
+      }
+    }
+
+    .table__search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .table__container {
+    height: 100%;
+    overflow-y: scroll;
+    background-color: $white;
+
+    table {
+      border-collapse: separate;
+      width: 100%;
+      position: relative;
+      // border: 1px solid $primary-50;
+
+      thead {
+        background-color: $white;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1;
+
+        tr {
+          th {
+            text-align: left;
+            padding: $x-0-75 $x-1;
+            background-color: $primary-50;
+            color: $primary;
+            white-space: nowrap;
+            @include small-font;
+            text-transform: uppercase;
+            // border: 1px solid $primary-50;
+          }
+        }
+      }
+      tbody {
+        tr {
+          background-color: $white-alt;
+          @include transition(100ms);
+          &:hover {
+            background-color: $primary-15;
+          }
+          td {
+            text-align: left;
+            padding: $x-0-25 $x-1;
+            font-weight: $semi-bold;
+            color: $dark-alt;
+            @include small-font;
+            white-space: nowrap;
+            @include transition(100ms);
+            // border: 1px solid $primary-50;
+          }
+        }
+      }
+    }
+  }
+
+  .table__pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .MuiPagination-root {
+      .MuiButtonBase-root.MuiPaginationItem-root {
+        color: $primary !important;
+        font-family: $poppins;
+        font-weight: $medium;
+      }
+      .MuiButtonBase-root.MuiPaginationItem-root.Mui-selected {
+        background-color: $primary !important;
+        color: $white !important;
+      }
+    }
+    .pagination__text {
+      color: $dark-alt;
+      @include small-font;
+      font-weight: $medium;
+    }
+  }
+}

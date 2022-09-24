@@ -1,0 +1,109 @@
+.product__card {
+  background-color: $primary-25;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  // height: max-content;
+  @include breakpoint(md) {
+    margin: initial;
+  }
+
+  img {
+    height: 130px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card__details {
+    padding: 0 $x-0-5;
+
+    .card__title {
+      color: $dark-alt;
+      font-weight: $semi-bold;
+      @include normal-font;
+    }
+
+    .card__author {
+      color: $dark-alt;
+      font-weight: $semi-bold;
+      @include smaller-font;
+      display: block;
+      .author {
+        color: $primary;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .card__price {
+      color: $dark-alt;
+      @include small-font;
+      font-weight: $bold;
+      border-right: 1px solid $gray;
+      margin-right: $x-0-5;
+      padding-right: $x-0-5;
+    }
+    .card__stock {
+      @extend .card__price;
+      font-weight: $semi-bold;
+      @include smallest-font;
+      color: $primary;
+    }
+    .card__qty {
+      @extend .card__price;
+      font-weight: $semi-bold;
+      @include smallest-font;
+      color: $primary;
+      border: none;
+    }
+    .card__outStock {
+      @extend .card__stock;
+      color: $red;
+      border: none;
+    }
+  }
+
+  .card__footer {
+    margin: $x-0-5;
+    margin-bottom: $x-0-75;
+
+    .footer__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .card__counter {
+        display: flex;
+        align-items: center;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        width: max-content;
+        padding: 0.1rem;
+        .MuiIconButton-root {
+          @include transition(300ms);
+          .MuiSvgIcon-root {
+            color: $dark-alt;
+            @include h4-font;
+            @include transition(300ms);
+          }
+        }
+        .counter__value {
+          background-color: transparent;
+          width: 1.6rem;
+          height: 1.6rem;
+          text-align: center;
+          border-radius: 50%;
+          font-weight: $semi-bold;
+          color: $dark-alt;
+          @include small-font;
+        }
+      }
+    }
+
+    .MuiChip-root {
+      width: 100%;
+      margin-top: $x-0-75;
+    }
+  }
+}

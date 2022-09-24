@@ -1,0 +1,89 @@
+.adminLogin {
+  height: 80vh;
+
+  .adminLogin__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  .adminLogin__form {
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    padding: $x-0-75 $x-1 $x-1-5;
+    margin: 0 auto 0;
+    background-color: $primary-75;
+    @include breakpoint(sm) {
+      padding: $x-1 $x-1-5 $x-1-75;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $primary;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0.7;
+      border-radius: 10px;
+    }
+
+    .adminLogin__title {
+      @include h1-font;
+      font-weight: $semi-bold;
+      color: $white-alt;
+      text-align: center;
+    }
+
+    .form__group {
+      margin-top: $x-1-25;
+      .form__control {
+        border-radius: 35px;
+      }
+      .form__error {
+        margin-left: $x-1;
+      }
+    }
+
+    .form__flex {
+      margin-top: $x-0-25;
+      .form__checkbox {
+        .MuiSvgIcon-root {
+          color: $white-alt;
+        }
+        .checkbox__text {
+          font-family: $poppins;
+          @include small-font;
+          font-weight: $medium;
+          color: $white-alt;
+        }
+      }
+
+      .form__forget {
+        font-family: $poppins;
+        @include small-font;
+        font-weight: $medium;
+        color: $white-alt;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .adminLogin__btn {
+      margin-top: $x-0-75;
+      .MuiLoadingButton-root {
+        width: 100%;
+        border-radius: 35px;
+        height: 3rem;
+      }
+    }
+  }
+}

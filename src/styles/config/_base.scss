@@ -1,0 +1,67 @@
+/*********** Base Css ***/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @include body-margin(plus);
+  padding: 0;
+  overflow: overlay;
+  font-family: $poppins;
+  @include normal-font;
+  // background-color: $white-alt;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: $poppins;
+}
+button:disabled {
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+  // color: initial !important;
+  // background-color: inherit !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0.4rem;
+  height: 0.4rem;
+  &-thumb {
+    background: #505155;
+    // border-radius: 50px;
+    &:hover {
+      background: #3d3e42;
+    }
+  }
+}

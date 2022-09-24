@@ -1,0 +1,71 @@
+.shippingForm {
+  position: relative;
+  padding: $x-1 $x-1-25 $x-1;
+  // margin-top: $x-1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $white-alt;
+    z-index: -1;
+  }
+  .shippingForm__form {
+    .form__title {
+      color: $dark-alt;
+      @include h3-font;
+      font-weight: $semi-bold;
+      opacity: 0.9;
+      text-transform: uppercase;
+      border-bottom: 1px solid $gray;
+      padding-bottom: $x-0-25;
+      margin-bottom: $x-0-75;
+      text-align: center;
+      letter-spacing: 0.1rem;
+    }
+
+    .shipping__details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .cartSubtotal__total {
+        display: flex;
+        justify-content: space-between;
+
+        .subtotal__text {
+          color: $dark-alt;
+          @include normal-font;
+          font-weight: $semi-bold;
+          opacity: 0.7;
+          text-transform: uppercase;
+        }
+        .subtotal__digit {
+          color: $dark-alt;
+          @include normal-font;
+          font-weight: $bold;
+        }
+      }
+    }
+
+    form,
+    .paymentmethod__btn {
+      padding-top: $x-0-75;
+      margin-top: $x-0-5;
+      border-top: 1px solid $gray;
+      .form__group {
+        .form__control {
+          border-radius: 0;
+        }
+      }
+    }
+
+    .addDepartment__btn {
+      margin-top: $x-0-25;
+    }
+  }
+}

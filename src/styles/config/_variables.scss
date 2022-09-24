@@ -1,0 +1,67 @@
+/*********** Google Font ***/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import "breakpoints";
+
+/*********** Sass Variables ***/
+/******* Colors ***/
+$white: #ffffff;
+$white-alt: #f2f2f2;
+$gray: #b8b8b9;
+$dark: #000000;
+$dark-alt: #3d3e42;
+$info: #06abc1fd;
+// $cyan-alt: hsl(206, 59%, 89%);
+// $primary: #7879f1;
+// $primary-15: #7879f115;
+// $primary-25: #7879f125;
+// $primary-50: #7879f150;
+// $primary-75: #7879f175;
+$primary: #07669b;
+$primary-15: #07669b15;
+$primary-25: #07669b25;
+$primary-50: #07669b50;
+$primary-75: #07669b75;
+$red: #ff002e;
+$red-alt: #ff002ebf;
+$green: #008515;
+$peach: #f1788e;
+$warning: #ff8f0b96;
+
+/******* Font Family ***/
+$poppins: "Poppins", sans-serif;
+$anek: "Anek Malayalam", sans-serif;
+$dancing: "Dancing Script", cursive;
+
+/******* Font Weight ***/
+$light: 300;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$bolder: 800;
+
+/******* Margins/Paddings ***/
+$x-0-25: 0.25rem; /* 4px */
+$x-0-5: 0.5rem; /* 8px */
+$x-0-75: 0.75rem; /* 12px */
+$x-1: 1rem; /* 16px */
+$x-1-25: 1.25rem; /* 20px */
+$x-1-5: 1.5rem; /* 24px */
+$x-1-75: 1.75rem; /* 28px */
+$x-2: 2rem; /* 32px */
+$x-2-5: 2.5rem; /* 40px */
+$x-2-75: 2.75rem; /* 44px */
+$x-3: 3rem; /* 48px */
+
+/******* Border ***/
+// $border-gray: 1px solid $gray;
+// $border-dark-100: 1px solid $dark-100;
+// $border-dark-alt: 1px solid $dark-alt;
+$border-danger: 1px solid $red;
+
+/******* Z Index ***/
+$z-1: 1;
+$z-9: 9;
+$z-10: 10;
+$z-99: 99;
+$z-999: 999;

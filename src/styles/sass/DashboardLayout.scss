@@ -1,0 +1,16 @@
+.dashboardLayout {
+  .dashboarLayout__container {
+    .dashboardLayout__pages {
+      @include breakpoint(md) {
+        margin-left: 14rem;
+        height: calc(100vh - 4rem);
+      }
+      @include breakpoint(lg) {
+        margin-left: 15rem;
+      }
+      @include breakpoint(xl) {
+        margin-left: 16rem;
+      }
+    }
+  }
+}

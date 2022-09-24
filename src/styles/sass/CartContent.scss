@@ -1,0 +1,23 @@
+.cartContent {
+  background-color: $primary-15;
+  padding: 2rem;
+  margin-bottom: $x-1-25;
+  margin-top: $x-1;
+  .cartContent__title {
+    color: $dark-alt;
+    @include h3-font;
+    font-weight: $semi-bold;
+    margin-bottom: $x-1-25;
+    .title {
+      color: $primary;
+    }
+  }
+  .cartContent__grid {
+    display: grid;
+    gap: 2rem;
+
+    @include breakpoint(lg) {
+      grid-template-columns: 1fr 0.5fr;
+    }
+  }
+}

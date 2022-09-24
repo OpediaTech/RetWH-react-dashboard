@@ -1,0 +1,89 @@
+.posTable__section {
+  height: calc(100vh - 250px);
+  display: grid;
+  grid-template-rows: auto 10rem;
+
+  .posTable__container {
+    height: 100%;
+    overflow-y: scroll;
+    background-color: $white-alt;
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: $primary;
+
+        tr {
+          th {
+            text-align: left;
+            padding: $x-0-75 $x-1;
+            color: $white-alt;
+            white-space: nowrap;
+            @include small-font;
+            text-transform: uppercase;
+            font-weight: $semi-bold;
+          }
+        }
+      }
+      tbody {
+        tr {
+          background-color: $white-alt;
+          @include transition(100ms);
+
+          td {
+            text-align: left;
+            padding: $x-0-5 $x-1;
+            font-weight: $semi-bold;
+            color: $dark-alt;
+            @include small-font;
+            white-space: nowrap;
+            @include transition(100ms);
+
+            &:hover {
+              background-color: $primary-25;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .posTable__footer {
+    background-color: $white-alt;
+    padding: $x-0-75;
+    border-top: 1px solid $gray;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+
+    .footer__price {
+      display: flex;
+      align-items: center;
+
+      label {
+        width: 5rem;
+        @include small-font;
+        font-weight: $semi-bold;
+        color: $dark-alt;
+      }
+      input {
+        width: 10rem;
+        height: 1.8rem;
+        background-color: $white;
+        border: 1px solid $primary;
+        padding: 0 $x-0-5;
+        font-weight: $medium;
+        @include small-font;
+        color: $dark;
+      }
+    }
+  }
+}

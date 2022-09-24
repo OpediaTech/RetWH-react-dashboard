@@ -1,0 +1,24 @@
+.dashboardPageLayout__section {
+  position: relative;
+  background: gray;
+  .dashboardPageLayout__container {
+    .dashboardPageLayout__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header__title {
+        font-weight: $semi-bold;
+        color: $dark-alt;
+        @include h4-font;
+      }
+      .dashboardPageLayout__btn {
+        .MuiButton-root {
+          width: 11rem;
+          @include breakpoint(md) {
+            width: 12rem;
+          }
+        }
+      }
+    }
+  }
+}

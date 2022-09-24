@@ -1,0 +1,263 @@
+/*=================== LAYOUT ===================*/
+.container {
+  margin-right: $x-0-75;
+  margin-left: $x-0-75;
+  @include breakpoint(md) {
+    margin-right: $x-1-25;
+    margin-left: $x-1-25;
+  }
+  @include breakpoint(lg) {
+    margin-right: $x-1-5;
+    margin-left: $x-1-5;
+  }
+}
+
+.section {
+  padding: $x-1 0;
+  @include breakpoint(md) {
+    padding: $x-1-5 0;
+  }
+  @include breakpoint(lg) {
+    padding: $x-1-75 0;
+  }
+  @include breakpoint(xl) {
+    padding: $x-2 0;
+  }
+}
+
+// .loading__btn {
+//   // margin-top: $x-1-5;
+//   width: 100%;
+//   .MuiLoadingButton-root {
+//     border-radius: 0;
+//     font-family: $poppins;
+//     width: 100%;
+//     text-transform: capitalize;
+//     // background-color: $primary;
+//   }
+// }
+
+/*=================== REUSEABLE CLASSES ===================*/
+// Form Group
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: $x-1;
+}
+// Form Label
+.form__label {
+  font-weight: $semi-bold;
+  @include normal-font;
+  margin-bottom: 0.3rem;
+  color: $dark-alt;
+}
+// Form Control
+.form__control {
+  width: 100%;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: $x-0-5 $x-0-75;
+  height: 2.8rem;
+  font-weight: $medium;
+  @include small-font;
+  background-color: $white-alt;
+  color: $dark;
+  @include breakpoint(md) {
+    height: 3rem;
+  }
+  &:focus {
+    // box-shadow: $shadow;
+  }
+  &:hover {
+    //   box-shadow: $shadow;
+  }
+}
+
+// Form Select
+.form__select {
+  width: 100%;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: $x-0-5 $x-0-75;
+  height: 2.8rem;
+  font-weight: $medium;
+  @include small-font;
+  background-color: $white-alt;
+  color: $dark;
+  @include breakpoint(md) {
+    height: 3rem;
+  }
+}
+
+// From Options
+.form__option {
+  font-weight: $medium;
+  @include small-font;
+  color: $dark-alt;
+  // border: 1px solid $primary;
+  // height: 3rem !important;
+  // background-color: transparent;
+  // line-height: 2;
+  // padding: $x-2-5;
+}
+
+// Form Error
+.form__error {
+  font-weight: $medium;
+  color: $red;
+  @include small-font;
+  opacity: 0.8;
+}
+
+// Form Grid
+.form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  column-gap: 1rem;
+}
+
+// Form Flex
+.form__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Form Required
+.form__required {
+  color: $red;
+}
+
+// Form Headline
+.form__headline {
+  color: $primary;
+  @include h3-font;
+  font-weight: $semi-bold;
+  border-bottom: 1px solid $gray;
+  margin-bottom: $x-1;
+  padding-bottom: $x-0-25;
+}
+.form__headline2 {
+  color: $primary;
+  @include h4-font;
+  font-weight: $semi-bold;
+  padding-bottom: $x-0-25;
+}
+
+// Small Button
+.extra__btn {
+  .MuiButton-root {
+    height: 2.5rem;
+    width: 7.5rem;
+    background-color: $primary;
+    color: $white;
+    font-family: $poppins;
+    @include smaller-font;
+    @include breakpoint(md) {
+      height: 2.8rem;
+      width: 9rem;
+      @include small-font;
+    }
+  }
+}
+
+// Long Button
+.long__btn {
+  .MuiButton-root {
+    width: 10rem;
+    @include breakpoint(md) {
+      height: 2.8rem;
+      width: 12rem;
+      @include small-font;
+    }
+  }
+}
+
+// Badge Icon
+.MuiBadge-badge {
+  background-color: $primary !important;
+  color: $white;
+}
+
+// Custom Alert
+.custom__alert {
+  margin: $x-1 0;
+  .MuiPaper-root {
+    // opacity: 0.9;
+    border-radius: 0;
+    .MuiAlert-message {
+      // color: $dark-alt;
+      font-weight: $medium;
+      font-family: $poppins;
+    }
+  }
+}
+
+// table loader
+.table__loader {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: $white-alt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Forbidden
+.forbidden {
+  // background-color: $gray;
+  height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(md) {
+    height: calc(100vh - 4rem);
+  }
+
+  .forbidden__status {
+    font-size: 7rem;
+    color: $dark-alt;
+    @include breakpoint(md) {
+      font-size: 10rem;
+    }
+  }
+
+  .forbidden__title {
+    margin-top: -2rem;
+    @include h1-font;
+    color: $dark-alt;
+  }
+
+  .forbidden__desc {
+    @include normal-font;
+    font-weight: $semi-bold;
+    margin-top: -0.5rem;
+    color: $dark-alt;
+  }
+}
+
+// Make order Section
+.m__section {
+  @include body-margin(minus);
+}
+
+.order__link {
+  color: $white-alt;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cart__loading {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-daterange-picker {
+  z-index: 9;
+}

@@ -1,0 +1,55 @@
+.connect {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $x-0-5;
+  .connect__form {
+    max-width: 500px;
+    width: 100%;
+    background-color: $white-alt;
+    padding: $x-1-5;
+    position: relative;
+    border-radius: 15px;
+    @include breakpoint(md) {
+      padding: $x-2;
+    }
+
+    .form__title {
+      font-weight: $semi-bold;
+      @include h3-font;
+      margin-bottom: $x-1;
+      color: $dark-alt;
+    }
+
+    .MuiToggleButtonGroup-root {
+      .MuiToggleButtonGroup-grouped {
+        font-family: $poppins;
+        text-transform: capitalize;
+        font-weight: $semi-bold;
+        @include normal-font;
+      }
+      .Mui-selected {
+        background-color: $primary-25;
+        color: $primary;
+      }
+    }
+
+    .connect__btn {
+      margin-top: $x-1-5;
+      width: 100%;
+      .MuiLoadingButton-root {
+        border-radius: 0;
+        font-family: $poppins;
+        width: 100%;
+        text-transform: capitalize;
+        background-color: $primary;
+      }
+    }
+    .connect__close {
+      position: absolute;
+      top: 0.8rem;
+      right: 0.8rem;
+    }
+  }
+}

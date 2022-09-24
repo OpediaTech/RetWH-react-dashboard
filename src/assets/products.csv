@@ -1,0 +1,4 @@
+department,email,prices.basic,prices.premium,prices.standard,productName,productOffer.basic.0.quantity,productOffer.basic.0.price,productOffer.basic.1.quantity,productOffer.basic.1.price,productOffer.premium.0.quantity,productOffer.premium.0.price,productOffer.standard.0.quantity,productOffer.standard.0.price,quantity,status,tags.0,tags.1,uniqueCode,modifier,buying_price
+631187ee6cfb6c31a8235cce,test@rest.com,5,8,7,W Product Bulk 1,2,10,6,20,3,40,3,10,10,acitve,hello,hello again,poiuytre,,
+631187ee6cfb6c31a8235cce,test@rest.com,5,8,7,W Product Bulk 2,2,10,6,20,3,40,3,10,10,acitve,hello,hello again,poiuytre,,
+631187ee6cfb6c31a8235cce,test@rest.com,5,8,7,W Product Bulk 3,2,10,6,20,3,40,3,10,10,acitve,hello,hello again,poiuytre,,

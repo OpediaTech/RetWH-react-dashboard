@@ -1,0 +1,138 @@
+.profile__section {
+  padding: $x-1 0;
+
+  .profile__container {
+    display: grid;
+    gap: 1.5rem;
+
+    @include breakpoint(lg) {
+      grid-template-columns: 350px auto;
+    }
+
+    .profile__details {
+      max-width: 350px;
+      background-color: $white-alt;
+      // border-radius: 5px;
+
+      .profile__avater {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: $x-1-25;
+
+        .avater__data {
+          .avater__title {
+            color: $dark-alt;
+            @include h4-font;
+          }
+          .avater__role {
+            color: $primary;
+            @include smallest-font;
+            font-weight: $semi-bold;
+            margin-top: -0.3rem;
+            display: block;
+          }
+        }
+      }
+
+      .profile__list {
+        display: flex;
+        flex-direction: column;
+
+        .profile__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $dark-alt;
+          @include small-font;
+          font-weight: $semi-bold;
+          border-top: 1px solid $gray;
+          padding: $x-0-75 $x-1-25;
+        }
+      }
+    }
+
+    .profile__shops {
+      .shops__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $gray;
+        padding-bottom: $x-0-75;
+
+        .shops__title {
+          color: $dark-alt;
+          @include h2-font;
+          font-weight: $semi-bold;
+        }
+      }
+
+      .shops__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        column-gap: 0.5rem;
+        row-gap: 1.5rem;
+        margin-top: $x-1;
+
+        .wholesaler__card {
+          background-color: $white-alt;
+          max-width: 150px;
+          width: 100%;
+          margin: 0 auto;
+          padding: $x-0-75;
+          text-align: center;
+          @include breakpoint(md) {
+            margin: initial;
+          }
+          img {
+            height: 80px;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .wholesalerCard__title {
+            @include small-font;
+            color: $dark-alt;
+            font-weight: $semi-bold;
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    // .profile__orders {
+    //   .profile__orders {
+    //     color: $dark-alt;
+    //     @include h3-font;
+    //     font-weight: $semi-bold;
+    //   }
+    // }
+  }
+
+  // .profile__products {
+  //   margin-top: $x-1-75;
+  //   .products__header {
+  //     border-bottom: 1px solid $gray;
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 1.5rem;
+  //     justify-content: space-between;
+  //     padding-bottom: $x-0-75;
+  //     .title {
+  //       color: $dark-alt;
+  //       @include h2-font;
+  //       font-weight: $semi-bold;
+  //     }
+  //   }
+
+  //   .products__grid {
+  //     display: grid;
+  //     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  //     column-gap: 0.8rem;
+  //     row-gap: 1.5rem;
+  //     margin-top: $x-1;
+  //   }
+  // }
+}

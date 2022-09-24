@@ -1,0 +1,84 @@
+.dashboard {
+  padding: $x-0-75;
+  .salesActivity__title {
+    color: $dark-alt;
+    margin-bottom: $x-0-5;
+    @include h3-font;
+    opacity: 0.9;
+  }
+  .dashboard__salesActivity {
+    display: grid;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      row-gap: 1.5rem;
+    }
+  }
+
+  .dashboard__details {
+    margin-top: $x-2;
+    display: grid;
+    gap: 1rem;
+    @include breakpoint(lg) {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: ". .";
+    }
+
+    .dashboard__charts {
+      // display: flex;
+      // flex-direction: column;
+      // gap: 2rem;
+
+      .chart__loading {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .date__picker {
+        margin-bottom: $x-1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .saleChart {
+        background-color: $primary-15;
+        padding: $x-0-75;
+        border-radius: 10px;
+        height: 400px;
+        margin-bottom: 2rem;
+      }
+
+      .revenueChart {
+        @extend .saleChart;
+        margin-bottom: 0;
+      }
+    }
+
+    .dashboard__topProducts {
+      background-color: $primary-50;
+      padding: $x-1;
+      border-radius: 10px;
+
+      .topProdcuts__title {
+        color: $dark-alt;
+        @include h3-font;
+        opacity: 0.9;
+      }
+
+      .topProducts__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        column-gap: 0.5rem;
+        row-gap: 1.5rem;
+      }
+    }
+  }
+
+  .dashboard__orders {
+    position: relative;
+  }
+}

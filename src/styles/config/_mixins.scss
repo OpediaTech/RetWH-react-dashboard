@@ -1,0 +1,137 @@
+// section height
+// @mixin section-height($vh) {
+//   height: calc($vh - 3.5rem);
+//   @include breakpoint(md) {
+//     height: calc($vh - 4rem);
+//   }
+// }
+
+// header height
+@mixin header-height() {
+  height: 3.5rem;
+  @include breakpoint(md) {
+    height: 4rem;
+  }
+}
+
+// body margin
+@mixin body-margin($value) {
+  @if ($value == plus) {
+    margin: 3.5rem 0 0 0;
+    @include breakpoint(md) {
+      margin: 4rem 0 0 0;
+    }
+  } @else if ($value == minus) {
+    margin: -3.5rem 0 0 0;
+    @include breakpoint(md) {
+      margin: -4rem 0 0 0;
+    }
+  }
+}
+
+/* Fonts and Typography --> 0.0625rem = 1px */
+/** biggest font */
+@mixin biggest-font() {
+  font-size: 3rem; /* --> 48px */
+  @include breakpoint(md) {
+    font-size: 5rem; /* --> 80px */
+  }
+}
+
+/** big font */
+@mixin big-font() {
+  font-size: 2rem; /* --> 32px */
+  @include breakpoint(md) {
+    font-size: 3rem; /* --> 48px */
+  }
+}
+
+/** h1 font */
+@mixin h1-font() {
+  font-size: 1.5rem; /* --> 24px */
+  @include breakpoint(md) {
+    font-size: 2.25rem; /* --> 36px */
+  }
+}
+
+/** h2 font */
+@mixin h2-font() {
+  font-size: 1.25rem; /* --> 20px */
+  @include breakpoint(md) {
+    font-size: 1.75rem; /* --> 28px */
+  }
+}
+
+/** h3 font */
+@mixin h3-font() {
+  font-size: 1.0625rem; /* --> 17px */
+  @include breakpoint(md) {
+    font-size: 1.25rem; /* --> 20px */
+  }
+}
+
+/** h4 font */
+@mixin h4-font() {
+  font-size: 1rem; /* --> 16px */
+  @include breakpoint(md) {
+    font-size: 1.125rem; /* --> 18px */
+  }
+}
+
+/** normal font */
+@mixin normal-font() {
+  font-size: 0.938rem; /* --> 15px */
+  @include breakpoint(md) {
+    font-size: 1rem; /* --> 16px */
+  }
+}
+
+/** small font */
+@mixin small-font() {
+  font-size: 0.813rem; /* --> 13px */
+  @include breakpoint(md) {
+    font-size: 0.875rem; /* --> 14px */
+  }
+}
+
+/** smaller font */
+@mixin smaller-font() {
+  font-size: 0.75rem; /* --> 12px */
+  @include breakpoint(md) {
+    font-size: 0.813rem; /* --> 13px */
+  }
+}
+
+/** smallest font */
+@mixin smallest-font() {
+  font-size: 0.625rem; /* --> 10px */
+  @include breakpoint(md) {
+    font-size: 0.75rem; /* --> 12px */
+  }
+}
+
+// header shadow
+@mixin header-shadow($y) {
+  box-shadow: 0px $y 50px 5px $gray;
+  -webkit-box-shadow: 0px $y 50px 5px $gray;
+  -moz-box-shadow: 0px $y 50px 5px $gray;
+}
+
+// button shadow
+@mixin shadow-btn() {
+  box-shadow: 0px 25px 50px -12px $gray;
+  -webkit-box-shadow: 0px 25px 50px -12px $gray;
+  -moz-box-shadow: 0px 25px 50px -12px $gray;
+}
+
+// box shadow
+@mixin box-shadow() {
+  box-shadow: -19px 27px 60px -12px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -19px 27px 60px -12px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -19px 27px 60px -12px rgba(0, 0, 0, 0.4);
+}
+
+// transition
+@mixin transition($ms) {
+  transition: ease-in-out all $ms;
+}

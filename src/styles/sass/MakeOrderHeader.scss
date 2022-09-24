@@ -1,0 +1,51 @@
+.pos__header {
+  background-color: $white-alt;
+  padding: $x-0-5 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__title {
+    color: $primary;
+    font-weight: $semi-bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .MuiSvgIcon-root {
+      color: $primary;
+    }
+  }
+
+  .nav__items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav__account {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .account__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .account__email {
+          color: $dark-alt;
+          font-weight: $semi-bold;
+          @include small-font;
+        }
+
+        .account__role {
+          font-weight: $semi-bold;
+          @include smallest-font;
+          color: $primary;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
